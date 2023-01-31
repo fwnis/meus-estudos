@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f7f7;
+  display: grid;
+  justify-items: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: grid;
+  gap: 3.75rem;
+  margin-top: 3.75rem;
+  justify-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 1.25rem;
+}
+
+.menu a {
+  background: #fff;
+  color: #000;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid #fff;
+  border-radius: 4px;
+}
+
+.menu a:hover {
+  border: 2px solid #e21;
+}
+
+.conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+  margin: 60px;
+}
+
+.bicicletas {
+  display: grid;
+  background: #fff;
+  padding: 20px;
+  text-align: right;
+  align-items: center;
+  justify-items: end;
+}
+
+.botao {
+  display: inline-block;
+  background: #e21;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.botao:hover {
+  background: rgb(155, 19, 7);
+}
+
+.vantagem {
+  text-align: right;
+  background: url(img/onda.svg);
+  background-position: center;
+  margin: auto 0px;
+  padding: 40px;
+}
+
+.vantagem h2 {
+  text-transform: uppercase;
+  color: #c5c5c5;
+  font-size: 4rem;
+}
+
+.vantagens {
+  background: #fff;
+  padding: 40px;
+}
+
+.vantagens ul {
+  display: grid;
+  list-style: none;
+  gap: 20px;
+}
+
+.vantagens li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 20px;
+  gap: 1rem;
+}
+
+.vantanges li h3,
+p {
+  grid-column: 2;
+}
+
+.vantagens li:nth-child(odd) {
+  background-color: #f7f7f7;
+  border: 4px solid #f7f7f7;
+}
+
+.vantagens li:nth-child(even) {
+  border: 4px solid #fff;
+}
+
+.vantagens li:hover {
+  border-left: 4px solid #e21;
+}
+
+.rodape {
+  background: #fff;
+  padding: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}

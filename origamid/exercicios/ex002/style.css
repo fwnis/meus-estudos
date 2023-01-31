@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f7f7f7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.foto {
+  max-width: 100%;
+}
+
+header {
+  text-align: center;
+  margin: 40px;
+}
+
+.logo {
+  margin: 20px;
+}
+
+nav {
+  margin: 40px;
+}
+
+nav > a {
+  text-decoration: none;
+  padding: 15px 30px;
+  margin: 10px;
+  background-color: #fff;
+  color: black;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  padding: 40px;
+}
+
+.bicicletas {
+  background: #fff;
+  padding: 40px;
+  text-align: right;
+}
+
+.bicicletas > h2 {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.bicicletas > p {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.bicicletas > a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 0px;
+  background: #ee2211;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 4px;
+}
