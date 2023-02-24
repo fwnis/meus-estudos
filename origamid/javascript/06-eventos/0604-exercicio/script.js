@@ -1,4 +1,4 @@
-// function coordenadaCirculo(event) {
+// function seguirMouse(event) {
 //   const x = event.x;
 //   const y = event.y;
 //   const circulo = document.querySelector(".circulo");
@@ -8,9 +8,9 @@
 
 const circulo = document.querySelector(".circulo");
 
-function coordenadaCirculo(event) {
-  circulo.style.top = event.y + 'px';
-  circulo.style.left = event.x + 'px';
+function seguirMouse(event) {
+  circulo.style.top = event.y + "px";
+  circulo.style.left = event.x + "px";
 }
 
-window.addEventListener("mousemove", coordenadaCirculo);
+window.addEventListener("mousemove", seguirMouse);
