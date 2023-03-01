@@ -5,6 +5,7 @@
 }
 
 img {
+  width: 100%;
   max-width: 100%;
   height: auto;
   display: block;
@@ -35,6 +36,28 @@ body {
     "footer footer footer";
 }
 
+@media (max-width: 1200px) {
+  .estrutura {
+    grid-template-areas:
+    "header header header"
+    "sidenav content content"
+    "sidenav anuncios anuncios"
+    "footer footer footer";
+  }
+}
+
+@media (max-width: 760px) {
+  .estrutura {
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "header"
+    "sidenav"
+    "content"
+    "anuncios"
+    "footer";
+  }
+}
+
 /* HEADER */
 
 .header {
@@ -62,6 +85,7 @@ body {
   background: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   transition: 0.2s;
+  font-size: 1.125rem;
 }
 
 .header nav a:hover {
@@ -70,6 +94,21 @@ body {
 
 .header nav li + li {
   margin-left: 30px;
+}
+
+@media (max-width: 760px) {
+  .header {
+    grid-template-columns: auto;
+  }
+  .logo {
+    margin-bottom: 20px;
+  }
+  .header nav a {
+    font-size: 1rem;
+  }
+  .header nav li + li {
+    margin-left: 10px;
+  }
 }
 
 /* SIDENAV */
@@ -83,7 +122,7 @@ body {
 .sidenav li a {
   display: block;
   min-width: 60px;
-  max-width: 100px;
+  max-width: 140px;
   margin: 0 auto 30px auto;
   background: white;
   padding: 20px;
@@ -96,16 +135,56 @@ body {
   background: #b07dfb;
 }
 
+@keyframes seta {
+  from {
+    right: 30px;
+  }
+  to {
+    right: 20px;
+  }
+}
+
+@media (max-width: 760px) {
+  .sidenav {
+    padding: 0 30px;
+    overflow: auto;
+    position: relative;
+  }
+  .sidenav::after {
+    content: "→";
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    color: rgba(0, 0, 0, .4);
+    animation: seta .5s ease-in 0s infinite alternate;
+  }
+  .sidenav ul {
+    display: flex;
+  }
+  .sidenav ul li {
+    flex: 1 0 120px;
+  }
+  .sidenav li a {
+    margin: 30px 30px 30px 0;
+  }
+}
+
 /* CONTENT */
 
 .content {
   grid-area: content;
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+}
+
+@media (max-width: 600px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
 }
 
 .col-wide {
@@ -198,6 +277,7 @@ p {
 }
 
 .citacao, .atributos {
+  align-self: start;
   padding: 30px;
   border-radius: 5px;
   box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
@@ -220,6 +300,10 @@ p {
   padding: 15px;
 }
 
+.atributos li + li {
+  border-top: 2px solid #b07dfb;
+}
+
 /* ANUNCIOS */
 
 .anuncios {
@@ -229,6 +313,7 @@ p {
   align-content: start;
   padding: 30px;
   gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 /* FOOTER */
