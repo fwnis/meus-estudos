@@ -1,0 +1,11 @@
+.titulo {
+  color: #43c;
+}
+
+.preco {
+  font-weight: bold;
+}
+
+.comprar {
+  padding: .5rem 1rem;
+}
