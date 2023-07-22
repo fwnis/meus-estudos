@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
 
 const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+  async function handleFetch(url) {
+    const response = await fetch(url, { mode: "no-cors" });
+    const json = await response.json();
+    console.log(json);
+  }
 
-export default App
+  return (
+    <button onClick={() => handleFetch("http://localhost:3000/filmes")}>
+      App
+    </button>
+  );
+};
+
+export default App;
