@@ -1,0 +1,22 @@
+"use strict";
+const produto1 = ["Notebook", 2500];
+const produto2 = ["Notebook", 2500];
+produto2[0].toLowerCase();
+produto2[1].toFixed();
+if (typeof produto1[0] === "string") {
+    console.log(produto1[0].toLowerCase());
+}
+const [nome, preco] = produto2;
+nome;
+preco;
+function getText(selector) {
+    const el = document.querySelector(selector);
+    if (el) {
+        return [el, el.innerText];
+    }
+    else {
+        return null;
+    }
+}
+const button = getText("button");
+console.log(button);
